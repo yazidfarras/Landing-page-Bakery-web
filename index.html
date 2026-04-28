@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lail's Bake</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "merah-brand": "#FF0000",
+              "merah-brand-dark": "#a9202c",
+              krem: "#F4F3F0",
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Bacasime Antique"', "serif"],
+            },
+            keyframes: {
+              mutermuter: {
+                "0%": { transform: "rotate(0deg)" },
+                "100%": { transform: "rotate(360deg)" },
+              },
+            },
+            animation: {
+              muter: "mutermuter 20s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-sans bg-krem flex flex-col items-center m-0;
+        }
+        h1,
+        h2 {
+          @apply font-serif m-0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <div class="top-0 w-full fixed max-w-[768px] py-2 px-4 z-10">
+      <nav
+        class="rounded-full bg-white py-2 px-4 flex items-center gap-5 justify-between"
+      >
+        <img src="/image/LOGO (4).svg" alt="logo" class="mr-auto w-[60px]" />
+        <div class="flex gap-3">
+          <div class="flex items-center gap-1">
+            <img src="/image/Vector (4).svg" alt="" />
+            <a
+              href="https://wa.me/+628123456789"
+              target="_blank"
+              class="no-underline text-black hover:underline"
+              >08123456789</a
+            >
+          </div>
+          <button
+            class="hidden sm:inline-block py-3 px-6 rounded-full font-bold border border-merah-brand text-merah-brand bg-transparant cursor-pointer transition-all duration-300 hover:bg-merah-brand hover:text-white"
+          >
+            Order Now
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <main class="w-full max-w-[768px] p-4">
+      <!-- Hero section -->
+      <section
+        class="mt-[120px] flex flex-col-reverse sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
+      >
+        <div class="flex flex-col items-center sm:items-start gap-5">
+          <h1 class="text-[48px] leading-[48px] text-merah-brand max-w-[377px]">
+            Bakery Catering, Made Fresh for Every Occasion
+          </h1>
+          <p class="text-base max-w-[306px]">
+            Delicious baked goods tailored for your office or home events.
+          </p>
+          <button
+            class="py-3 px-6 rounded-full font-bold bg-merah-brand text-white border-none cursor-pointer transition-all duration-300 hover:bg-merah-brand-dark"
+          >
+            Order Now
+          </button>
+        </div>
+
+        <div class="flex justify-end relative">
+          <img
+            src="/image/Vector (3).svg"
+            alt="Rolling Logo"
+            class="w-[153px] absolute bottom-[15px] -left-[70px] sm:-left-[17px] animate-muter"
+          />
+          <img
+            src="/image/image 1.svg"
+            alt="Hero 
+                image"
+            class="max-w-[300px]"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
